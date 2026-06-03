@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>L'Impératrice</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #120916;
+            color: #fff3df;
+        }
+
+        header {
+            min-height: 100vh;
+            background:
+                linear-gradient(rgba(18, 9, 22, 0.45), rgba(18, 9, 22, 0.95)),
+                url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/NDLE2025LImperatrice_4.jpg/1280px-NDLE2025LImperatrice_4.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        nav {
+            padding: 28px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        nav a {
+            color: #fff3df;
+            text-decoration: none;
+            margin-left: 22px;
+        }
+
+        nav a:hover {
+            color: #ffb86b;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 0 7% 90px 7%;
+            max-width: 900px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #ffcc8f;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 86px;
+            line-height: 0.95;
+            letter-spacing: -4px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+            max-width: 650px;
+            line-height: 1.5;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 14px 26px;
+            border: 1px solid #fff3df;
+            color: #fff3df;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .button:hover {
+            background: #fff3df;
+            color: #120916;
+        }
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .cream {
+            background: #fff3df;
+            color: #120916;
+        }
+
+        .orange {
+            background: #e46e3a;
+            color: #fff3df;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 46px;
+            margin-top: 0;
+            letter-spacing: -1px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ffcc8f;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .cream .small-title {
+            color: #b84a2d;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+            margin-top: 35px;
+        }
+
+        .card {
+            border: 1px solid rgba(255, 243, 223, 0.35);
+            border-radius: 18px;
+            padding: 28px;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .cream .card {
+            border: 1px solid rgba(18, 9, 22, 0.18);
+            background: rgba(18, 9, 22, 0.04);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        ul {
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .music-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .song {
+            border-bottom: 1px solid rgba(255, 243, 223, 0.35);
+            padding: 18px 0;
+            font-size: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 430px;
+            border: 0;
+            border-radius: 20px;
+        }
+
+        footer {
+            padding: 40px 7%;
+            text-align: center;
+            background: #08040a;
+            color: #c9b8a0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #ffcc8f;
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                display: block;
+            }
+
+            nav div {
+                margin-top: 18px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px 14px 0 0;
+            }
+
+            h1 {
+                font-size: 54px;
+            }
+
+            .two-columns,
+            .cards,
+            .music-list {
+                grid-template-columns: 1fr;
+            }
+
+            iframe {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="inicio">
+        <nav>
+            <span class="logo">L'IMPÉRATRICE</span>
+            <div>
+                <a href="#banda">Banda</a>
+                <a href="#pulsar">Pulsar</a>
+                <a href="#musica">Música</a>
+                <a href="#video">Vídeo</a>
+                <a href="#tour">Tour</a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <p>Paris · Pop · Nu-disco · Électronique</p>
+            <h1>L'IMPÉRATRICE</h1>
+            <h2>
+                Una banda francesa que mezcla disco, funk, pop electrónico y una estética retrofuturista
+                la mejor estetica posible.
+            </h2>
+            <a class="button" href="#pulsar">Entrar en la era Pulsar</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="banda" class="cream">
+            <div class="two-columns">
+                <div>
+                    <p class="small-title">Sobre la banda</p>
+                    <h2>Una emperatriz</h2>
+                    <p>
+                        L'Impératrice es un grupo francés formado en París en 2012. Su sonido combina pop,
+                        nu-disco y electrónica, con bajos caracteristicos, sintetizadores brillantes y una
+                        producción trabajada.
+                    </p>
+                    <p>
+                        El proyecto comenzó alrededor de Charles de Boisseguin y después se convirtió en una
+                        banda completa. Actualmente la voz principal es Louve, tras la salida de Flore
+                        Benguigui en 2024.
+                    </p>
+                </div>
+
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/NDLE2025LImperatrice_4.jpg/800px-NDLE2025LImperatrice_4.jpg"
+                         alt="L'Impératrice actuando en directo">
+                </div>
+            </div>
+        </section>
+
+        <section id="pulsar">
+            <p class="small-title">Último álbum</p>
+            <h2>Pulsar</h2>
+            <p>
+                <strong>Pulsar</strong>, publicado en 2024, es su tercer álbum de estudio. El disco mantiene
+                la energía disco-funk del grupo, pero abre el sonido hacia colaboraciones internacionales,
+                canciones en varios idiomas y una producción más expansiva.
+            </p>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Matahari</h3>
+                    <p>Primer álbum de estudio, publicado en 2018.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Tako Tsubo</h3>
+                    <p>Publicado en 2021. Su obra magna, bailable y con una identidad visual muy marcada.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Pulsar</h3>
+                    <p>Publicado en 2024. Una etapa más internacional, cálida y luminosa.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="musica" class="orange">
+            <div class="two-columns">
+                <div>
+                    <p class="small-title">Selección</p>
+                    <h2>Escucha esencial</h2>
+                    <p>
+                        Una lista breve para entrar en el sonido de L'Impératrice:
+                    </p>
+                </div>
+
+                <div class="music-list">
+                    <div class="song">01 · Vanille Fraise</div>
+                    <div class="song">02 · Erreur 404</div>
+                    <div class="song">03 · Agitations Tropicales</div>
+                    <div class="song">04 · Peur des filles</div>
+                    <div class="song">05 · Danza Marilù</div>
+                    <div class="song">06 · Sweet & Sublime</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="video">
+            <p class="small-title">Vídeo oficial</p>
+            <h2>Sweet & Sublime</h2>
+            <p>
+                Uno de los temas de la etapa <em>Pulsar</em>, con la colaboración de Erick the Architect.
+            </p>
+
+            <iframe
+                src="https://www.youtube.com/embed/hDYiiOBLh8M"
+                title="L'Impératrice - Sweet & Sublime"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <section id="tour" class="cream">
+            <div class="two-columns">
+                <div>
+                    <p class="small-title">En directo</p>
+                    <h2>Tour mundial</h2>
+                    <p>
+                        La música de L'Impératrice funciona especialmente bien en directo: batería, bajo,
+                        guitarras y sintetizadores convierten sus canciones en una experiencia de club y
+                        concierto a la vez.
+                    </p>
+                    <a class="button" href="https://l-imperatrice.cool/">Visitar web oficial</a>
+                </div>
+
+                <div>
+                    <h3>Integrantes actuales</h3>
+                    <ul>
+                        <li>Louve — voz principal y sintetizador</li>
+                        <li>Charles de Boisseguin — teclados y sintetizadores</li>
+                        <li>Tom Daveau — batería y percusión</li>
+                        <li>David Gaugué — bajo</li>
+                        <li>Hagni Gwon — teclados y sintetizadores</li>
+                        <li>Achille Trocellier — guitarra eléctrica</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Sitios
+            <a href="https://en.wikipedia.org/wiki/L%27Imp%C3%A9ratrice">Wikipedia</a>,
+            <a href="https://l-imperatrice.cool/">web oficial</a> y
+            <a href="https://www.youtube.com/@limperatrice_">YouTube</a>.
+        </p>
+    </footer>
+
+</body>
+</html>
